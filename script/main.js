@@ -29,9 +29,20 @@ const animationTimeline = () => {
         .split("")
         .join("</span><span>")}</span>`;
 
-    hbd.innerHTML = `<span>${hbd.innerHTML
-        .split("")
-        .join("</span><span>")}</span>`;
+    const hbdText = hbd.innerHTML;
+    const splitText = hbdText.split(/(<br\s*\/?>)/g); // Pisahkan dengan tetap menyertakan <br>
+    let finalHTML = "";
+
+    splitText.forEach(part => {
+        if (part.match(/<br\s*\/?>/)) {
+            finalHTML += part; // biarkan tag <br> tetap
+        } else {
+            finalHTML += `<span>${part.split("").join("</span><span>")}</span>`;
+        }
+    });
+
+    hbd.innerHTML = finalHTML;
+
 
     const ideaTextTrans = {
         opacity: 0,

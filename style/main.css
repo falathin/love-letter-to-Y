@@ -292,3 +292,9 @@ body {
     font-weight: lighter;
   }
 }
+
+img.profile-picture {
+  border: 4px solid #ff69b4;    /* Border pink */
+  border-radius: 20px;          /* Sudut membulat */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+}

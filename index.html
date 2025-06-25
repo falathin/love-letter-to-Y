@@ -40,7 +40,8 @@
           const options = { year: 'numeric', month: 'long', day: 'numeric' }
           const formattedDate = today.toLocaleDateString('en-US', options)
 
-          todayText.textContent = `Today is ${formattedDate} — ラブレター (Love Letter) 💌`
+          // todayText.textContent = `Today is ${formattedDate} <br> — ラブレター (Love Letter) 💌`
+          todayText.innerHTML = `Today is ${formattedDate} <br> — ラブレター (Love Letter) 💌`;
         </script>
       </div>
 
@@ -91,7 +92,7 @@
         <img src="img/love-letter-stroke-icon-by-Vexels.svg" alt="hat" class="hat" />
         <div class="wish">
           <!-- <h3 class="wish-hbd">Will you be my girlfriend?</h3> -->
-          <h3 class="wish-hbd">WillYouBeMyGirlfriend?</h3>
+          <h3 class="wish-hbd">WillYouBeMy<br>Girlfriend?</h3>
 
           <h5 id="wishText">
             It’s okay if you don’t feel the same — I just wanted to be honest.
