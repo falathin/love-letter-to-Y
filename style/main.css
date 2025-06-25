@@ -110,10 +110,11 @@ body {
 }
 
 .six .hat {
-  left: 38%;
+  left: 41.5%;
   position: absolute;
-  top: -50%;
-  width: 150px; /* Ukuran dibesarkan dari 80px ke 150px */
+  /* transform: scale(0.1); */
+  top: -31%;
+  width: 80px;
 }
 
 .baloons img {
